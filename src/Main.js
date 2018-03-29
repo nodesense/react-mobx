@@ -11,9 +11,10 @@ import {render} from "react-dom";
 import Routes from "./app/Routes";
 
 
-import { useStrict } from "mobx";
+//import { useStrict } from "mobx";
+
 //enfore action method to adopt Flux architecture
-useStrict(true);
+//useStrict(true);
 
 
 console.log("PRODUCTION ", PRODUCTION);
@@ -22,12 +23,14 @@ import cartState from "./app/cart/CartState";
 import productState from "./app/product/ProductState";
 import authState from "./app/auth/AuthState";
 
+import calculatorState from "./app/components/state/Calculator";
 //cartState.loadItems();
  
 let store = {
     cart: cartState,
     productState: productState,
-    authState: authState
+    authState: authState,
+    calculator: calculatorState
 } 
 
 

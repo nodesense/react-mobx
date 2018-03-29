@@ -4,7 +4,7 @@ import {NavLink, withRouter} from "react-router-dom";
 
 import {inject, observer} from "mobx-react";
 
-@inject("cart", "authState")
+@inject("cart", "authState", "calculator")
 @withRouter
 @observer
 export class Header extends React.Component {
@@ -35,7 +35,6 @@ export class Header extends React.Component {
     }
 
     render() {
-        console.log("header render called");
         
         return (
             <div>
@@ -64,6 +63,15 @@ export class Header extends React.Component {
                          
                         About
                 </NavLink>
+
+                 <NavLink to="/calc" 
+                          
+                          className="button"
+                          activeClassName="success">
+                          
+                         Calc
+                 </NavLink>
+ 
 
 
                 <NavLink to="/cart" 

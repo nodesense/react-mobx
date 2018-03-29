@@ -67,7 +67,7 @@ var config = {
 
   devServer: {
     contentBase: APP_DIR,
-    port: 8080,
+    //port: 8080,
 
     historyApiFallback: {
       index: '/'

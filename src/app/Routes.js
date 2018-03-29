@@ -17,7 +17,7 @@ import ProductRoutes from "./product/Routes";
 import Login from "./auth/components/Login";
 
 import AuthRoute from "./auth/components/AuthRoute";
-
+import Calc from "./components/Calc";
 
 //Route config
 
@@ -44,6 +44,11 @@ export default function Routes () {
 
             <Route path="/products"
                        component={ProductRoutes} />
+
+            
+            <Route path="/calc"
+                       component={Calc} />
+
 
 
             <Route path="/login"

@@ -1,5 +1,6 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import PropTypes from "prop-types";
 
 import {inject, observer} from "mobx-react";
 

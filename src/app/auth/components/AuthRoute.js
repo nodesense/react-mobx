@@ -1,6 +1,8 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import {inject, observer} from "mobx-react";
+
+import PropTypes from "prop-types";
 
 //AuthRoute allows user to load component 
 //ONLY if the user is authenticated

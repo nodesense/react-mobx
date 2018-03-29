@@ -1,6 +1,9 @@
 
 import React, {Component} from "react"; //from node_modules
 
+import DevTools from 'mobx-react-devtools';
+
+
 import {Header} from "./components/Header";
 import {Home} from "./components/Home";
 import {Footer} from "./components/Footer";
@@ -50,6 +53,10 @@ export class App extends Component {
 
                 <div>
                     {this.props.children}
+                </div>
+
+                 <div>
+                <DevTools />
                 </div>
 
                 <Footer year={2017}  />
