@@ -1,0 +1,13 @@
+Correct: using MobX utilities to read / write to objects
+Since MobX 4 it is also possible to use observable objects as dynamic collection, if they are read / updated by using the mobx apis, so that mobx can keep track of the property changes. The following will react as well:
+
+import { get, set, observable } from "mobx"
+
+const twitterUrls = observable.object({
+    "John": "twitter.com/johnny"
+})
+
+autorun(() => {
+    console.log(get(twitterUrls, "Sara")) // get can track not yet existing properties
+})
+set(twitterUrls, { "Sara" : "twitter.com/horsejs"})

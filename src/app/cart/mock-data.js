@@ -6,7 +6,7 @@ export default function generate() {
             id: i,
             name: "Product "  + i,
             price: Math.ceil( Math.random() * 1000),
-            quantity: 0
+            qty: 0
         }
 
         items.push(item);

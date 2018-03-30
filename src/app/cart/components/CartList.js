@@ -9,11 +9,6 @@ import CartItem from "./CartItem";
    let list = items.map ( item => (
        <CartItem item={item}  
                  key={item.id}
-
-                 onRemove= { () => props.cart.removeItem(item.id)}
-       
-                 onUpdate = { (qty) => props.cart.updateItem(item.id, qty)  }
-       
         />
    ))
 
@@ -26,11 +21,25 @@ import CartItem from "./CartItem";
                     <th> Name </th>
                     <th> Price </th>
                     <th> Quantity </th>
+                    <th> Total </th>
                     <th> Update </th>
                     <th> Delete </th>
                 </tr>
 
                 {list}
+
+                <tr>
+                    <td colSpan="2">
+                        <h4>Grand Total</h4>
+                    </td>
+                    <td >
+                        <h4>{props.cart.quantity} items</h4>
+                    </td>
+                    <td colSpan="3">
+                        <h4>{props.cart.amount}</h4>
+                    </td>
+                    
+                </tr>
                 </tbody>
             </table>
         </div>

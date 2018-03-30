@@ -10,6 +10,8 @@ import {render} from "react-dom";
 //app route configuration
 import Routes from "./app/Routes";
 
+import "./Basics";
+
 
 //import { useStrict } from "mobx";
 
@@ -24,13 +26,16 @@ import productState from "./app/product/ProductState";
 import authState from "./app/auth/AuthState";
 
 import calculatorState from "./app/components/state/Calculator";
+import orderState from "./app/cart/OrderState";
+
 //cartState.loadItems();
  
 let store = {
     cart: cartState,
     productState: productState,
     authState: authState,
-    calculator: calculatorState
+    calculator: calculatorState,
+    order: orderState
 } 
 
 

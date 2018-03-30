@@ -10,6 +10,13 @@ import {Footer} from "./components/Footer";
 
 import PropTypes from "prop-types";
 
+
+import {observer} from "mobx-react";
+const Sum = observer(({calculator}) => <div>Sum {calculator.sum}</div>)
+
+import calculatorState from "./components/state/Calculator";
+
+
 export class App extends Component {
 
     constructor() {
@@ -46,6 +53,7 @@ export class App extends Component {
                 
                 {this.show && <Header title="React App"  />}
 
+                <Sum calculator={calculatorState} />
                 {/*  view container
                 
                     children passed from route
